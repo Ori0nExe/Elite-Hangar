@@ -1,0 +1,313 @@
+*{
+    box-sizing: border-box;
+    -Webkit-font-smoothing:antialiased;
+    text-overflow: ellipsis;
+     text-rendering: optimizeLegibility;
+     margin: 0;
+     padding: 0;
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'russooneregular';
+    src: url('../fonts/russoone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/russoone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+h1,h2,h3,h4{
+    font-family: "russooneregular";
+}
+html,body{
+    height: 100%;
+    font-family: "robotoregular";
+}
+
+[role=banner]{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-shrink: 0;
+    width: 17rem;
+    height: 100%;
+    border-right: 0.5rem solid #f07c01;
+    background: black;
+    overflow: auto;
+    color: white;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+    grid-template-areas: "aside main";
+}
+aside{
+    grid-area: aside;
+    width: 17rem;
+    height: 100%;
+    position: fixed;
+}
+
+main{
+    grid-area: main;
+    width: auto;
+}
+.logo{
+    padding: 20px;
+}
+.spisk{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+    background-color: black;
+}
+.spisk h3 a{
+    text-decoration: none;
+    color: white;
+}
+section{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.drop{
+    padding: 10px;
+    background-color: white;
+    color: black;
+    list-style: none;    
+    z-index: -1;
+    animation: animate_menu_hide 2000ms 2s 1;
+    transition: all 4s;
+    display: none;
+}
+.drop-item{
+    padding: 10px;
+}
+.drop-item h4 a{
+    
+    color: black;
+    text-decoration: none;
+}
+.title{
+    padding: 1rem 2rem;
+}
+.title:hover{
+    background-color: #f07c01;
+}
+.orange{
+    background-color: #f07c01;
+}
+.bottom-icons{ 
+    
+    width: 30px;
+    fill: white;
+}
+.bottom-container{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+body{
+    height: 100%;
+    display: flex;
+    background-color: black;
+}
+.main-slider-wrapper{
+    height: 100%;
+    width: 100%;
+}
+.main-slider-content{
+    width: 100%;
+    height: 100%;
+    background: url(../slider/2.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s all;
+}
+.main-slider-title a{
+    color: white;
+    text-shadow: 0px 0px 8px black;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.card{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex; 
+    margin: 30px;
+    
+}
+.card:hover{
+    box-shadow: 0px 0px 13px 12px #FFFFFF;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: solid white 5px;
+}
+.card-txt{
+    color: white;
+    position: absolute;
+    top: 350px;
+    right: 15px;
+    text-shadow: 2px 2px 2px #000000;
+    font-size: 24px;
+}
+.big_sign{
+    color: white;
+    font-size: 48px;
+    text-shadow: 4px 4px 6px #f07c01;
+}
+.hangar-block{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@keyframes animate_menu_show{
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes animate_menu_hide{
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+}
+
+.drop-show{
+    display: block;
+    z-index: -1;
+    animation: animate_menu_show 200ms;
+   
+}
+.drop-hide{
+    display: block;
+    z-index: -1;
+    animation: animate_menu_hide 200ms;
+}
+.article-img-part{
+    width: 100%;
+    height: 1000px;
+    background: url(../img/Explorer-article.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.article-img-part-Eagle-Mk-II{
+    width: 100%;
+    height: 600px;
+    background: url(../img/Eagle-Mk-II.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.article-img-part-Hauler{
+    width: 100%;
+    height: 1000px;
+    background: url(../img/huler.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.article-img-part-diamondback-S{
+    width: 100%;
+    height: 1000px;
+    background: url(../img/DiamondbackScout.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.article-img-part-imperial-courier{
+    width: 100%;
+    height: 600px;
+    background: url(../img/Courier-article.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.article-img-part-adder{
+    width: 100%;
+    height: 600px;
+    background: url(../img/adder2.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.article-img-txt{
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0px 0px 8px black;
+}
+.article-description{
+    display: flex;
+    flex-direction: row;
+    background: #f07c01;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.article-description p{
+    margin-bottom: 1rem;
+}
+.big-sigh-description{
+    padding-right: 50px;
+    text-shadow: 2px 2px 4px #f07c01;
+    
+}
+.article-tech{
+    color: white;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    background: url(../img/Angar.jpg) no-repeat center top;
+    background-size: cover;
+}
+.article-tech-adder{
+    color:  white;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    background: url(../img/Ship_tech_adder.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.tech-spec{
+    margin-bottom: 15px;
+}
