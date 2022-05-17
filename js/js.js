@@ -25,7 +25,7 @@ for(let i of spisk){ i.addEventListener("click",()=>{
 //Слайдер на мейне
 let images = ["slider/1.jpg","slider/2.jpg"];
 let titles = ["Imperial Courier","Diamondback Explorer"]
-let links = ["#", "diamondback-e.html"]
+let links = ["Imperial Courier.html", "diamondback-e.html"]
 const slider1 = document.querySelector(".main-slider-content");
 const title1 = document.querySelector(".main-slider-title")
 let j = 0;
